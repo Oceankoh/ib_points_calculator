@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:ib_points_calc/Globals.dart';
@@ -29,6 +30,8 @@ class CalculatorState extends State<Calculator> {
   }
 
   getLatestBoundaries() async {
+	final databaseReference = Firestore.instance;
+
     return true;
   }
 

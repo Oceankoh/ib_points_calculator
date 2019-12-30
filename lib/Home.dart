@@ -173,12 +173,12 @@ class HomeState extends State<HomePage> {
                     style: Theme.of(context).textTheme.button),
                 onPressed: () {
                   //TODO ensure input is a number
-                  if (hl1.text != '' &&
-                      hl2.text != '' &&
-                      hl3.text != '' &&
-                      sl1.text != '' &&
-                      sl2.text != '' &&
-                      sl3.text != '') {
+                  if (hl1.text != null&&
+                      hl2.text != null &&
+                      hl3.text != null &&
+                      sl1.text != null &&
+                      sl2.text != null &&
+                      sl3.text != null) {
                     SubjectCombination.hl1Score = double.parse(hl1.text);
                     SubjectCombination.hl2Score = double.parse(hl2.text);
                     SubjectCombination.hl3Score = double.parse(hl3.text);

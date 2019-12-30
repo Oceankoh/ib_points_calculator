@@ -6,15 +6,5 @@ class SubjectCombination {
 
 class Boundaries {
   static int year = 2019;
-  static Map<String, Ranges> savedBoundaries;
-}
-
-class Ranges {
-  int grade1;
-  int grade2;
-  int grade3;
-  int grade4;
-  int grade5;
-  int grade6;
-  int grade7;
+  Map<String, Map<int, int>> savedBoundaries;
 }
