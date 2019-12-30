@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "667927615807",
+    "firebase_url": "https://ibpointscalculator.firebaseio.com",
+    "project_id": "ibpointscalculator",
+    "storage_bucket": "ibpointscalculator.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:667927615807:android:58c97eebbefd1142a19b8a",
+        "android_client_info": {
+          "package_name": "com.ocean.ib_points_calc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "667927615807-adc6t8fnt7ilj97lmo8a55u5394on3ec.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC6582XmPdmInjahBrgkCN4NpdLyWkNYdo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "667927615807-adc6t8fnt7ilj97lmo8a55u5394on3ec.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
