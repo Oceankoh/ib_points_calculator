@@ -1,15 +1,15 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:ib_points_calc/Globals.dart';
 import 'package:ib_points_calc/device.dart' as dev;
 import 'package:ib_points_calc/Home.dart';
 
 // ignore: must_be_immutable
 class Results extends StatelessWidget {
-  int points;
+  int points, year;
 
-  Results(int ibPoints) {
+  Results(int ibPoints, boundaryYear) {
     this.points = ibPoints;
+    this.year = boundaryYear;
   }
 
   @override
@@ -26,7 +26,7 @@ class Results extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              'Boundaries from: ' + Boundaries.year.toString(),
+              'Boundaries from: ' + year.toString(),
               style: Theme.of(context).textTheme.caption,
             ),
             Text(
