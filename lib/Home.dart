@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:ib_points_calc/Globals.dart';
+import 'package:ib_points_calc/SubjectSelector.dart';
 import 'package:ib_points_calc/device.dart' as dev;
 
 class HomePage extends StatefulWidget {
@@ -9,7 +10,12 @@ class HomePage extends StatefulWidget {
 }
 
 class HomeState extends State<HomePage> {
-  TextEditingController hl1, hl2, hl3, sl1, sl2, sl3;
+  TextEditingController hl1 = TextEditingController(),
+      hl2 = TextEditingController(),
+      hl3 = TextEditingController(),
+      sl1 = TextEditingController(),
+      sl2 = TextEditingController(),
+      sl3 = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -168,29 +174,54 @@ class HomeState extends State<HomePage> {
                   ],
                 ),
               ),
-              MaterialButton(
-                child: Text('Calculate',
-                    style: Theme.of(context).textTheme.button),
-                onPressed: () {
-                  //TODO ensure input is a number
-                  if (hl1.text != '' &&
-                      hl2.text != '' &&
-                      hl3.text != '' &&
-                      sl1.text != '' &&
-                      sl2.text != '' &&
-                      sl3.text != '') {
-                    SubjectCombination.hl1Score = double.parse(hl1.text);
-                    SubjectCombination.hl2Score = double.parse(hl2.text);
-                    SubjectCombination.hl3Score = double.parse(hl3.text);
-                    SubjectCombination.sl1Score = double.parse(sl1.text);
-                    SubjectCombination.sl2Score = double.parse(sl2.text);
-                    SubjectCombination.sl3Score = double.parse(sl3.text);
-                  }
-                },
-                minWidth: dev.screenWidth * 0.75,
-                height: dev.screenHeight * 0.075,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10)),
+              Row(
+                children: <Widget>[
+                  MaterialButton(
+                    child: Text('Modify Subjects',
+                        style: Theme
+                            .of(context)
+                            .textTheme
+                            .button),
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => SubjectSelect()));
+                    },
+                    minWidth: dev.screenWidth * 0.4,
+                    height: dev.screenHeight * 0.075,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10)),
+                  ),
+                  MaterialButton(
+                    child: Text('Calculate',
+                        style: Theme
+                            .of(context)
+                            .textTheme
+                            .button),
+                    onPressed: () {
+                      //TODO ensure input is a number
+                      if (hl1.text != '' &&
+                          hl2.text != '' &&
+                          hl3.text != '' &&
+                          sl1.text != '' &&
+                          sl2.text != '' &&
+                          sl3.text != '') {
+                        SubjectCombination.hl1Score = double.parse(hl1.text);
+                        SubjectCombination.hl2Score = double.parse(hl2.text);
+                        SubjectCombination.hl3Score = double.parse(hl3.text);
+                        SubjectCombination.sl1Score = double.parse(sl1.text);
+                        SubjectCombination.sl2Score = double.parse(sl2.text);
+                        SubjectCombination.sl3Score = double.parse(sl3.text);
+                      }
+                    },
+                    minWidth: dev.screenWidth * 0.4,
+                    height: dev.screenHeight * 0.075,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10)),
+                  )
+                ],
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               )
             ],
           ),
