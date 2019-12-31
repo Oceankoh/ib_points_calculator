@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/services.dart';
 import 'package:ib_points_calc/Globals.dart';
 import 'package:ib_points_calc/SubjectSelector.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -29,6 +30,7 @@ class SplashState extends State<Splash> {
   @override
   void initState() {
     super.initState();
+    SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
     initSharedPreferences();
     Future.delayed(Duration(seconds: 3), () {
       if (SubjectCombination.HL1 == null) {
