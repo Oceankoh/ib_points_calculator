@@ -35,7 +35,7 @@ List<String> slSubjects = [
   'Economics',
   'Language and Literature',
   'French ab',
-  'Geograhy',
+  'Geography',
   'History',
   'Malay ab',
   'Malay B',
