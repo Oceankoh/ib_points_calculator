@@ -27,11 +27,17 @@ class Results extends StatelessWidget {
           children: <Widget>[
             Text(
               'Boundaries from: ' + year.toString(),
-              style: Theme.of(context).textTheme.caption,
+              style: Theme
+                  .of(context)
+                  .textTheme
+                  .subhead,
             ),
             Text(
               'Points: ' + points.toString(),
-              style: Theme.of(context).textTheme.caption,
+              style: Theme
+                  .of(context)
+                  .textTheme
+                  .subhead,
             ),
             MaterialButton(
               child: Text('Return Home',

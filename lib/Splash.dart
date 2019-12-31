@@ -7,8 +7,8 @@ import 'package:flutter/material.dart';
 import 'package:ib_points_calc/Home.dart';
 import 'package:ib_points_calc/device.dart' as dev;
 
-//import 'package:animator/animator.dart';
-//import 'dart:math';
+import 'package:animator/animator.dart';
+import 'dart:math';
 
 class Splash extends StatefulWidget {
   @override
@@ -59,26 +59,27 @@ class LoadAnimation extends StatelessWidget {
     return Container(
         child: Center(
             child: Column(children: [
-//      Container(
-//          child: Animator(
-//              tween: Tween<double>(begin: 0, end: 2 * pi),
-//              duration: Duration(seconds: 2),
-//              repeats: 0,
-//              curve: Curves.easeInOutQuart,
-//              builder: (anim) => Transform.rotate(
-//                  angle: anim.value,
-//                  child: Container(
-//                    decoration: BoxDecoration(
-//                      image: DecorationImage(
-//                          image: AssetImage('assets/MazeCircle.png')),
-//                      shape: BoxShape.circle,
-//                    ),
-//                    width: dev.screenWidth * 0.2,
-//                    height: dev.screenHeight * 0.2,
-//                  )))),
+              Container(
+                child: Animator(
+                  tween: Tween<double>(begin: 0, end: 2 * pi),
+                  duration: Duration(seconds: 2),
+                  repeats: 0,
+                  curve: Curves.easeInOutQuart,
+                  builder: (anim) =>
+                      Transform.rotate(
+                        angle: anim.value,
+                        child: Padding(
+                          padding: EdgeInsets.all(20),
+                          child: Icon(Icons.sync, size: 50),
+                        ),
+                      ),
+                ),
+              ),
       Text(
-        'LOADING',
-        style: TextStyle(fontSize: 40, color: Theme.of(context).primaryColor),
+        'Loading',
+        style: TextStyle(fontSize: 30, color: Theme
+            .of(context)
+            .primaryColor),
       ),
     ], mainAxisAlignment: MainAxisAlignment.center)));
   }

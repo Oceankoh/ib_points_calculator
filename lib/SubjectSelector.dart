@@ -80,6 +80,10 @@ class SubjectSelectState extends State<SubjectSelect> {
                   key: key1,
                   suggestions: hlSubjects,
                   decoration: InputDecoration(
+                    hintStyle: Theme
+                        .of(context)
+                        .textTheme
+                        .caption,
                     hintText: 'HL 1',
                     border: OutlineInputBorder(),
                   ),
@@ -96,6 +100,10 @@ class SubjectSelectState extends State<SubjectSelect> {
                   key: key2,
                   suggestions: hlSubjects,
                   decoration: InputDecoration(
+                    hintStyle: Theme
+                        .of(context)
+                        .textTheme
+                        .caption,
                     hintText: 'HL 2',
                     border: OutlineInputBorder(),
                   ),
@@ -112,6 +120,10 @@ class SubjectSelectState extends State<SubjectSelect> {
                   key: key3,
                   suggestions: hlSubjects,
                   decoration: InputDecoration(
+                    hintStyle: Theme
+                        .of(context)
+                        .textTheme
+                        .caption,
                     hintText: 'HL 3',
                     border: OutlineInputBorder(),
                   ),
@@ -128,6 +140,10 @@ class SubjectSelectState extends State<SubjectSelect> {
                   key: key4,
                   suggestions: slSubjects,
                   decoration: InputDecoration(
+                    hintStyle: Theme
+                        .of(context)
+                        .textTheme
+                        .caption,
                     hintText: 'SL 1',
                     border: OutlineInputBorder(),
                   ),
@@ -144,6 +160,10 @@ class SubjectSelectState extends State<SubjectSelect> {
                   key: key5,
                   suggestions: slSubjects,
                   decoration: InputDecoration(
+                    hintStyle: Theme
+                        .of(context)
+                        .textTheme
+                        .caption,
                     hintText: 'SL 2',
                     border: OutlineInputBorder(),
                   ),
@@ -160,6 +180,10 @@ class SubjectSelectState extends State<SubjectSelect> {
                   key: key6,
                   suggestions: slSubjects,
                   decoration: InputDecoration(
+                    hintStyle: Theme
+                        .of(context)
+                        .textTheme
+                        .caption,
                     hintText: 'SL 3',
                     border: OutlineInputBorder(),
                   ),

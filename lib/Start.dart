@@ -8,7 +8,14 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.amber,
+        textTheme: TextTheme(
+          title: TextStyle(fontSize: 25),
+          subhead: TextStyle(fontSize: 20),
+          caption: TextStyle(fontSize: 17,),
+          body1: TextStyle(fontSize: 15),
+          button: TextStyle(fontSize: 17),
+        ),
       ),
       home: Splash(),
     );
