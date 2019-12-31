@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:ib_points_calc/Calculator.dart';
 import 'package:ib_points_calc/Globals.dart';
 import 'package:ib_points_calc/SubjectSelector.dart';
 import 'package:ib_points_calc/device.dart' as dev;
@@ -213,6 +214,10 @@ class HomeState extends State<HomePage> {
                         SubjectCombination.sl1Score = double.parse(sl1.text);
                         SubjectCombination.sl2Score = double.parse(sl2.text);
                         SubjectCombination.sl3Score = double.parse(sl3.text);
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Calculator()));
                       }
                     },
                     minWidth: dev.screenWidth * 0.4,
