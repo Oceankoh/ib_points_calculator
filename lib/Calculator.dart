@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:ib_points_calc/Error.dart';
 import 'package:ib_points_calc/Globals.dart';
 import 'package:ib_points_calc/Results.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -27,22 +28,31 @@ class CalculatorState extends State<Calculator> {
           this.year = result['year'];
         });
       }
-      setState(() => this.status = 'Using boundaries from: ' + year.toString());
-      print('here');
-      points += calculatePoints(result['ranges']['HL' + SubjectCombination.HL1],
-          SubjectCombination.hl1Score);
-      points += calculatePoints(result['ranges']['HL' + SubjectCombination.HL2],
-          SubjectCombination.hl2Score);
-      points += calculatePoints(result['ranges']['HL' + SubjectCombination.HL3],
-          SubjectCombination.hl3Score);
-      points += calculatePoints(result['ranges']['HL' + SubjectCombination.SL1],
-          SubjectCombination.sl1Score);
-      points += calculatePoints(result['ranges']['HL' + SubjectCombination.SL2],
-          SubjectCombination.sl2Score);
-      points += calculatePoints(result['ranges']['HL' + SubjectCombination.SL3],
-          SubjectCombination.sl3Score);
-      Navigator.pushReplacement(context,
-          MaterialPageRoute(builder: (context) => Results(points, year)));
+      try {
+        points += calculatePoints(
+            result['ranges']['HL' + SubjectCombination.HL1],
+            SubjectCombination.hl1Score);
+        points += calculatePoints(
+            result['ranges']['HL' + SubjectCombination.HL2],
+            SubjectCombination.hl2Score);
+        points += calculatePoints(
+            result['ranges']['HL' + SubjectCombination.HL3],
+            SubjectCombination.hl3Score);
+        points += calculatePoints(
+            result['ranges']['HL' + SubjectCombination.SL1],
+            SubjectCombination.sl1Score);
+        points += calculatePoints(
+            result['ranges']['HL' + SubjectCombination.SL2],
+            SubjectCombination.sl2Score);
+        points += calculatePoints(
+            result['ranges']['HL' + SubjectCombination.SL3],
+            SubjectCombination.sl3Score);
+        Navigator.pushReplacement(context,
+            MaterialPageRoute(builder: (context) => Results(points, year)));
+      } catch (e) {
+        Navigator.pushReplacement(
+            context, MaterialPageRoute(builder: (context) => ErrorPage()));
+      }
     });
   }
 
