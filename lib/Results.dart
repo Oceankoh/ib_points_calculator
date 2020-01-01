@@ -25,6 +25,7 @@ class ResultsState extends State<Results> {
   @override
   void initState() {
     super.initState();
+    AppAds.ads.showFullScreenAd();
   }
 
   ResultsState(int ibPoints, boundaryYear) {

@@ -1,4 +1,6 @@
 import 'dart:io';
+import 'package:ads/ads.dart';
+import 'package:firebase_admob/firebase_admob.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
 import 'package:ib_points_calc/Globals.dart';
@@ -30,11 +32,24 @@ class SplashState extends State<Splash> {
 
   initAds() {
     final String appId = Platform.isAndroid
-        ? 'ca-app-pub-9334071002974261~2869280074'
+        ? 'ca-app-pub-3940256099942544~3347511713'
         : 'ca-app-pub-9334071002974261~4992880538';
     final String interstitialId = Platform.isAndroid
-        ? 'ca-app-pub-9334071002974261/2294565008'
+        ? 'ca-app-pub-3940256099942544/1033173712'
         : 'ca-app-pub-9334071002974261/3679798861';
+    AppAds.ads = Ads(appId);
+
+    /// Assign the listener.
+    var eventListener = (MobileAdEvent event) {
+      if (event == MobileAdEvent.closed) {
+        print("User has opened and now closed the ad.");
+      }
+    };
+
+    AppAds.ads.setFullScreenAd(
+        adUnitId: interstitialId,
+        listener: eventListener,
+        keywords: ['IB', 'International Baccalaureate']);
   }
 
   @override
