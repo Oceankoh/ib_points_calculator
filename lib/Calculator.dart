@@ -39,13 +39,13 @@ class CalculatorState extends State<Calculator> {
             result['ranges']['HL' + SubjectCombination.HL3],
             SubjectCombination.hl3Score);
         points += calculatePoints(
-            result['ranges']['HL' + SubjectCombination.SL1],
+            result['ranges']['SL' + SubjectCombination.SL1],
             SubjectCombination.sl1Score);
         points += calculatePoints(
-            result['ranges']['HL' + SubjectCombination.SL2],
+            result['ranges']['SL' + SubjectCombination.SL2],
             SubjectCombination.sl2Score);
         points += calculatePoints(
-            result['ranges']['HL' + SubjectCombination.SL3],
+            result['ranges']['SL' + SubjectCombination.SL3],
             SubjectCombination.sl3Score);
         Navigator.pushReplacement(context,
             MaterialPageRoute(builder: (context) => Results(points, year)));

@@ -1,3 +1,4 @@
+import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
 import 'package:ib_points_calc/Globals.dart';
@@ -27,12 +28,22 @@ class SplashState extends State<Splash> {
     });
   }
 
+  initAds() {
+    final String appId = Platform.isAndroid
+        ? 'ca-app-pub-9334071002974261~2869280074'
+        : 'ca-app-pub-9334071002974261~4992880538';
+    final String interstitialId = Platform.isAndroid
+        ? 'ca-app-pub-9334071002974261/2294565008'
+        : 'ca-app-pub-9334071002974261/3679798861';
+  }
+
   @override
   void initState() {
     super.initState();
     SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
     initSharedPreferences();
     Future.delayed(Duration(seconds: 3), () {
+      initAds();
       if (SubjectCombination.HL1 == null) {
         Navigator.pushReplacement(
             context, MaterialPageRoute(builder: (context) => SubjectSelect()));
@@ -75,12 +86,12 @@ class LoadAnimation extends StatelessWidget {
                       ),
                 ),
               ),
-      Text(
-        'Loading',
-        style: TextStyle(fontSize: 30, color: Theme
-            .of(context)
-            .primaryColor),
-      ),
-    ], mainAxisAlignment: MainAxisAlignment.center)));
+              Text(
+                'Loading',
+                style: TextStyle(fontSize: 30, color: Theme
+                    .of(context)
+                    .primaryColor),
+              ),
+            ], mainAxisAlignment: MainAxisAlignment.center)));
   }
 }
