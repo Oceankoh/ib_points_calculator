@@ -17,7 +17,7 @@ class CalculatorState extends State<Calculator> {
   String status;
 
   void calculate() {
-    status = 'Getting latest Boundaries';
+    status = 'Getting latest boundaries';
     getLatestBoundaries().then((data) {
       Map<String, dynamic> result = data.data;
       if (result != null) {
