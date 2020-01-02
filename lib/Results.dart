@@ -62,7 +62,7 @@ class ResultsState extends State<Results> {
               child: Text('Return Home',
                   style: Theme.of(context).textTheme.button),
               onPressed: () {
-                Navigator.pushReplacement(context,
+                Navigator.push(context,
                     MaterialPageRoute(builder: (context) => HomePage()));
               },
               minWidth: dev.screenWidth * 0.75,

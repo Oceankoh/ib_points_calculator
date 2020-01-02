@@ -197,7 +197,6 @@ class SubjectSelectState extends State<SubjectSelect> {
               MaterialButton(
                 child: Text('Save', style: Theme.of(context).textTheme.button),
                 onPressed: () {
-                  //TODO ensure subject is in list not just empty
                   if (fieldHL1.textField.controller.text != '' &&
                       fieldHL2.textField.controller.text != '' &&
                       fieldHL3.textField.controller.text != '' &&

@@ -33,10 +33,10 @@ class SplashState extends State<Splash> {
   initAds() {
     final String appId = Platform.isAndroid
     //TODO replace with legit app id and interstitial id
-        ? 'ca-app-pub-3940256099942544~3347511713'
+        ? 'ca-app-pub-9334071002974261~2869280074'
         : 'ca-app-pub-9334071002974261~4992880538';
     final String interstitialId = Platform.isAndroid
-        ? 'ca-app-pub-3940256099942544/1033173712'
+        ? 'ca-app-pub-9334071002974261/2294565008'
         : 'ca-app-pub-9334071002974261/3679798861';
     AppAds.ads = Ads(appId);
 
@@ -49,8 +49,7 @@ class SplashState extends State<Splash> {
 
     AppAds.ads.setFullScreenAd(
         adUnitId: interstitialId,
-        listener: eventListener,
-        keywords: ['IB', 'International Baccalaureate']);
+        listener: eventListener);
   }
 
   @override
