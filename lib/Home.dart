@@ -201,7 +201,6 @@ class HomeState extends State<HomePage> {
                             .textTheme
                             .button),
                     onPressed: () {
-                      //TODO ensure input is a number
                       if (hl1.text != '' &&
                           hl2.text != '' &&
                           hl3.text != '' &&
