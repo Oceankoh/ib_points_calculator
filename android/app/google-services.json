@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "667927615807-55jp2qdhschu7uhr4g9b5fcosb0ddsos.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ocean.ib_points_calc",
+            "certificate_hash": "dcf333a588718d6d36d58c210a7a44c972c808c5"
+          }
+        },
+        {
           "client_id": "667927615807-adc6t8fnt7ilj97lmo8a55u5394on3ec.apps.googleusercontent.com",
           "client_type": 3
         }
