@@ -13,7 +13,7 @@ class SubjectSelect extends StatefulWidget {
 
 List<String> hlSubjects = [
   'Biology',
-  'Business Mangement',
+  'Business Management',
   'Chemistry',
   'Computer Science',
   'Economics',
@@ -29,7 +29,7 @@ List<String> hlSubjects = [
 
 List<String> slSubjects = [
   'Biology',
-  'Business Mangement',
+  'Business Management',
   'Chemistry',
   'Chinese B',
   'Economics',
