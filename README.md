@@ -8,5 +8,5 @@ Have a nice day :)
  
  ## Update (03-August-2020)
  
- App is broken since I took down the firebase containing all the grade boundaries. Syllabus has changed and I'm not updating since no one uses this anyway.
+ App is broken since I took down the firebase containing all the grade boundaries. Syllabus has changed and I'm not updating since I'm not even using it anyway.
  Should you wish to rebuild a working version, make your own firebase DB and populate it with the grade boundaries then replace the google-services.json file. 
